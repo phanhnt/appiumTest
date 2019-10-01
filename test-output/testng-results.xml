@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="1" ignored="0"
+	total="4" passed="3">
+	<reporter-output>
+	</reporter-output>
+	<suite name="Default suite" duration-ms="34974"
+		started-at="2019-10-01T10:37:29 ICT"
+		finished-at="2019-10-01T10:38:04 ICT">
+		<groups>
+		</groups>
+		<test name="Default test" duration-ms="34974"
+			started-at="2019-10-01T10:37:29 ICT"
+			finished-at="2019-10-01T10:38:04 ICT">
+			<class name="createScreen.checkInputRecordName">
+				<test-method status="PASS"
+					signature="beforeTest()[pri:0, instance:createScreen.checkInputRecordName@4a87761d]"
+					name="beforeTest" is-config="true" duration-ms="18761"
+					started-at="2019-10-01T10:37:29 ICT"
+					finished-at="2019-10-01T10:37:48 ICT">
+					<reporter-output>
+					</reporter-output>
+				</test-method> <!-- beforeTest -->
+				<test-method status="FAIL"
+					signature="testNameIsNull()[pri:1, instance:createScreen.checkInputRecordName@4a87761d]"
+					name="testNameIsNull" duration-ms="16136"
+					started-at="2019-10-01T10:37:48 ICT"
+					finished-at="2019-10-01T10:38:04 ICT">
+					<exception class="java.lang.NoSuchMethodError">
+						<message>
+              <![CDATA[com.sun.jna.Native.load(Ljava/lang/String;Ljava/lang/Class;)Lcom/sun/jna/Library;]]>
+						</message>
+						<full-stacktrace>
+              <![CDATA[java.lang.NoSuchMethodError: com.sun.jna.Native.load(Ljava/lang/String;Ljava/lang/Class;)Lcom/sun/jna/Library;
+at net.sourceforge.tess4j.util.LoadLibs.getTessAPIInstance(LoadLibs.java:85)
+at net.sourceforge.tess4j.TessAPI.<clinit>(TessAPI.java:42)
+at net.sourceforge.tess4j.Tesseract.init(Tesseract.java:427)
+at net.sourceforge.tess4j.Tesseract.doOCR(Tesseract.java:223)
+at net.sourceforge.tess4j.Tesseract.doOCR(Tesseract.java:195)
+at createScreen.checkInputRecordName.readToastMessage(checkInputRecordName.java:107)
+at createScreen.checkInputRecordName.testNameIsNull(checkInputRecordName.java:83)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.ArrayList.forEach(Unknown Source)
+at org.testng.TestRunner.privateRun(TestRunner.java:770)
+at org.testng.TestRunner.run(TestRunner.java:591)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+at org.testng.TestNG.runSuites(TestNG.java:1032)
+at org.testng.TestNG.run(TestNG.java:1000)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+						</full-stacktrace>
+					</exception> <!-- java.lang.NoSuchMethodError -->
+					<reporter-output>
+					</reporter-output>
+				</test-method> <!-- testNameIsNull -->
+				<test-method status="PASS"
+					signature="testNameIsEmpty()[pri:2, instance:createScreen.checkInputRecordName@4a87761d]"
+					name="testNameIsEmpty" duration-ms="1"
+					started-at="2019-10-01T10:38:04 ICT"
+					finished-at="2019-10-01T10:38:04 ICT">
+					<reporter-output>
+					</reporter-output>
+				</test-method> <!-- testNameIsEmpty -->
+				<test-method status="PASS"
+					signature="testNameIsHTMLTags()[pri:3, instance:createScreen.checkInputRecordName@4a87761d]"
+					name="testNameIsHTMLTags" duration-ms="1"
+					started-at="2019-10-01T10:38:04 ICT"
+					finished-at="2019-10-01T10:38:04 ICT">
+					<reporter-output>
+					</reporter-output>
+				</test-method> <!-- testNameIsHTMLTags -->
+				<test-method status="PASS"
+					signature="testNameMaxlength()[pri:4, instance:createScreen.checkInputRecordName@4a87761d]"
+					name="testNameMaxlength" duration-ms="2"
+					started-at="2019-10-01T10:38:04 ICT"
+					finished-at="2019-10-01T10:38:04 ICT">
+					<reporter-output>
+					</reporter-output>
+				</test-method> <!-- testNameMaxlength -->
+				<test-method status="PASS"
+					signature="afterTest()[pri:0, instance:createScreen.checkInputRecordName@4a87761d]"
+					name="afterTest" is-config="true" duration-ms="1"
+					started-at="2019-10-01T10:38:04 ICT"
+					finished-at="2019-10-01T10:38:04 ICT">
+					<reporter-output>
+					</reporter-output>
+				</test-method> <!-- afterTest -->
+			</class> <!-- createScreen.checkInputRecordName -->
+		</test> <!-- Default test -->
+	</suite> <!-- Default suite -->
+</testng-results>
