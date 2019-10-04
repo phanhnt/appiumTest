@@ -28,7 +28,9 @@ public class setup {
 		caps.setCapability("udid", "fe0ecacb"); //Give Device ID of your mobile phone "ce01171198b9463e02"
 		caps.setCapability("platformName", "Android");
 		caps.setCapability("platformVersion", "5.0.2");
+		caps.setCapability("automatioName", "UiAutomator2");
 		caps.setCapability("app", "C:\\Users\\PA\\Downloads\\VoiceChangerAudioEffects_v1.4.1_apkpure.com.apk");
+		   
 		//caps.setCapability("appPackage", "com.supereffect.voicechanger");
 		//caps.setCapability("appActivity", "com.supereffect.voicechanger2.UI.activity.MainActivity");
 		

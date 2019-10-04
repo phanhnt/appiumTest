@@ -1,307 +1,295 @@
 <!DOCTYPE html>
 
 <html>
-<head>
-<meta charset='utf-8'>
-<title>TestNG reports</title>
+  <head>
+  <meta charset='utf-8'>
+  <title>TestNG reports</title>
 
-<link type="text/css" href="testng-reports.css" rel="stylesheet" />
-<script type="text/javascript" src="jquery-1.7.1.min.js"></script>
-<script type="text/javascript" src="testng-reports.js"></script>
-<script type="text/javascript" src="https://www.google.com/jsapi"></script>
-<script type='text/javascript'>
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" />
+    <script type="text/javascript" src="jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="testng-reports.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type='text/javascript'>
       google.load('visualization', '1', {packages:['table']});
       google.setOnLoadCallback(drawTable);
       var suiteTableInitFunctions = new Array();
       var suiteTableData = new Array();
     </script>
-<!--
+    <!--
       <script type="text/javascript" src="jquery-ui/js/jquery-ui-1.8.16.custom.min.js"></script>
      -->
-</head>
+  </head>
 
-<body>
-	<div class="top-banner-root">
-		<span class="top-banner-title-font">Test results</span> <br /> <span
-			class="top-banner-font-1">1 suite, 1 failed test</span>
-	</div>
-	<!-- top-banner-root -->
-	<div class="navigator-root">
-		<div class="navigator-suite-header">
-			<span>All suites</span> <a href="#" class="collapse-all-link"
-				title="Collapse/expand all the suites"> <img
-				class="collapse-all-icon" src="collapseall.gif"> </img> <!-- collapse-all-icon -->
-			</a>
-			<!-- collapse-all-link -->
-		</div>
-		<!-- navigator-suite-header -->
-		<div class="suite">
-			<div class="rounded-window">
-				<div class="suite-header light-rounded-window-top">
-					<a href="#" class="navigator-link" panel-name="suite-Default_suite">
-						<span class="suite-name border-failed">Default suite</span>
-					</a>
-					<!-- navigator-link -->
-				</div>
-				<!-- suite-header light-rounded-window-top -->
-				<div class="navigator-suite-content">
-					<div class="suite-section-title">
-						<span>Info</span>
-					</div>
-					<!-- suite-section-title -->
-					<div class="suite-section-content">
-						<ul>
-							<li><a href="#" class="navigator-link "
-								panel-name="test-xml-Default_suite"> <span>C:\Users\PA\AppData\Local\Temp\testng-eclipse-567363839\testng-customsuite.xml</span>
-							</a> <!-- navigator-link  --></li>
-							<li><a href="#" class="navigator-link "
-								panel-name="testlist-Default_suite"> <span
-									class="test-stats">1 test</span>
-							</a> <!-- navigator-link  --></li>
-							<li><a href="#" class="navigator-link "
-								panel-name="group-Default_suite"> <span>0 groups</span>
-							</a> <!-- navigator-link  --></li>
-							<li><a href="#" class="navigator-link "
-								panel-name="times-Default_suite"> <span>Times</span>
-							</a> <!-- navigator-link  --></li>
-							<li><a href="#" class="navigator-link "
-								panel-name="reporter-Default_suite"> <span>Reporter
-										output</span>
-							</a> <!-- navigator-link  --></li>
-							<li><a href="#" class="navigator-link "
-								panel-name="ignored-methods-Default_suite"> <span>Ignored
-										methods</span>
-							</a> <!-- navigator-link  --></li>
-							<li><a href="#" class="navigator-link "
-								panel-name="chronological-Default_suite"> <span>Chronological
-										view</span>
-							</a> <!-- navigator-link  --></li>
-						</ul>
-					</div>
-					<!-- suite-section-content -->
-					<div class="result-section">
-						<div class="suite-section-title">
-							<span>Results</span>
-						</div>
-						<!-- suite-section-title -->
-						<div class="suite-section-content">
-							<ul>
-								<li><span class="method-stats">4 methods, 1 failed,
-										3 passed</span></li>
-								<li><span class="method-list-title failed">Failed
-										methods</span> <span class="show-or-hide-methods failed"> <a
-										href="#" panel-name="suite-Default_suite"
-										class="hide-methods failed suite-Default_suite"> (hide)</a> <!-- hide-methods failed suite-Default_suite -->
-										<a href="#" panel-name="suite-Default_suite"
-										class="show-methods failed suite-Default_suite"> (show)</a> <!-- show-methods failed suite-Default_suite -->
-								</span>
-									<div class="method-list-content failed suite-Default_suite">
-										<span> <img width="3%" src="failed.png" /> <a href="#"
-											class="method navigator-link"
-											panel-name="suite-Default_suite"
-											title="createScreen.checkInputRecordName"
-											hash-for-method="testNameIsNull">testNameIsNull</a> <!-- method navigator-link -->
-										</span> <br />
-									</div> <!-- method-list-content failed suite-Default_suite --></li>
-								<li><span class="method-list-title passed">Passed
-										methods</span> <span class="show-or-hide-methods passed"> <a
-										href="#" panel-name="suite-Default_suite"
-										class="hide-methods passed suite-Default_suite"> (hide)</a> <!-- hide-methods passed suite-Default_suite -->
-										<a href="#" panel-name="suite-Default_suite"
-										class="show-methods passed suite-Default_suite"> (show)</a> <!-- show-methods passed suite-Default_suite -->
-								</span>
-									<div class="method-list-content passed suite-Default_suite">
-										<span> <img width="3%" src="passed.png" /> <a href="#"
-											class="method navigator-link"
-											panel-name="suite-Default_suite"
-											title="createScreen.checkInputRecordName"
-											hash-for-method="testNameIsEmpty">testNameIsEmpty</a> <!-- method navigator-link -->
-										</span> <br /> <span> <img width="3%" src="passed.png" /> <a
-											href="#" class="method navigator-link"
-											panel-name="suite-Default_suite"
-											title="createScreen.checkInputRecordName"
-											hash-for-method="testNameIsHTMLTags">testNameIsHTMLTags</a> <!-- method navigator-link -->
-										</span> <br /> <span> <img width="3%" src="passed.png" /> <a
-											href="#" class="method navigator-link"
-											panel-name="suite-Default_suite"
-											title="createScreen.checkInputRecordName"
-											hash-for-method="testNameMaxlength">testNameMaxlength</a> <!-- method navigator-link -->
-										</span> <br />
-									</div> <!-- method-list-content passed suite-Default_suite --></li>
-							</ul>
-						</div>
-						<!-- suite-section-content -->
-					</div>
-					<!-- result-section -->
-				</div>
-				<!-- navigator-suite-content -->
-			</div>
-			<!-- rounded-window -->
-		</div>
-		<!-- suite -->
-	</div>
-	<!-- navigator-root -->
-	<div class="wrapper">
-		<div class="main-panel-root">
-			<div panel-name="suite-Default_suite" class="panel Default_suite">
-				<div class="suite-Default_suite-class-failed">
-					<div class="main-panel-header rounded-window-top">
-						<img src="failed.png" /> <span class="class-name">createScreen.checkInputRecordName</span>
-					</div>
-					<!-- main-panel-header rounded-window-top -->
-					<div class="main-panel-content rounded-window-bottom">
-						<div class="method">
-							<div class="method-content">
-								<a name="testNameIsNull"> </a>
-								<!-- testNameIsNull -->
-								<span class="method-name">testNameIsNull</span>
-								<div class="stack-trace">java.lang.NoSuchMethodError:
-									com.sun.jna.Native.load(Ljava/lang/String;Ljava/lang/Class;)Lcom/sun/jna/Library;
-									at
-									net.sourceforge.tess4j.util.LoadLibs.getTessAPIInstance(LoadLibs.java:85)
-									at
-									net.sourceforge.tess4j.TessAPI.&lt;clinit&gt;(TessAPI.java:42)
-									at net.sourceforge.tess4j.Tesseract.init(Tesseract.java:427) at
-									net.sourceforge.tess4j.Tesseract.doOCR(Tesseract.java:223) at
-									net.sourceforge.tess4j.Tesseract.doOCR(Tesseract.java:195) at
-									createScreen.checkInputRecordName.readToastMessage(checkInputRecordName.java:107)
-									at
-									createScreen.checkInputRecordName.testNameIsNull(checkInputRecordName.java:83)
-									at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-									at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-									at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown
-									Source) at java.lang.reflect.Method.invoke(Unknown Source) at
-									org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-									at
-									org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
-									at
-									org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
-									at
-									org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-									at
-									org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
-									at
-									org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
-									at
-									org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-									at
-									org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-									at java.util.ArrayList.forEach(Unknown Source) at
-									org.testng.TestRunner.privateRun(TestRunner.java:770) at
-									org.testng.TestRunner.run(TestRunner.java:591) at
-									org.testng.SuiteRunner.runTest(SuiteRunner.java:402) at
-									org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396) at
-									org.testng.SuiteRunner.privateRun(SuiteRunner.java:355) at
-									org.testng.SuiteRunner.run(SuiteRunner.java:304) at
-									org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-									at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-									at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180) at
-									org.testng.TestNG.runSuitesLocally(TestNG.java:1102) at
-									org.testng.TestNG.runSuites(TestNG.java:1032) at
-									org.testng.TestNG.run(TestNG.java:1000) at
-									org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-									at
-									org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-									at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)</div>
-								<!-- stack-trace -->
-							</div>
-							<!-- method-content -->
-						</div>
-						<!-- method -->
-					</div>
-					<!-- main-panel-content rounded-window-bottom -->
-				</div>
-				<!-- suite-Default_suite-class-failed -->
-				<div class="suite-Default_suite-class-passed">
-					<div class="main-panel-header rounded-window-top">
-						<img src="passed.png" /> <span class="class-name">createScreen.checkInputRecordName</span>
-					</div>
-					<!-- main-panel-header rounded-window-top -->
-					<div class="main-panel-content rounded-window-bottom">
-						<div class="method">
-							<div class="method-content">
-								<a name="testNameIsEmpty"> </a>
-								<!-- testNameIsEmpty -->
-								<span class="method-name">testNameIsEmpty</span>
-							</div>
-							<!-- method-content -->
-						</div>
-						<!-- method -->
-						<div class="method">
-							<div class="method-content">
-								<a name="testNameIsHTMLTags"> </a>
-								<!-- testNameIsHTMLTags -->
-								<span class="method-name">testNameIsHTMLTags</span>
-							</div>
-							<!-- method-content -->
-						</div>
-						<!-- method -->
-						<div class="method">
-							<div class="method-content">
-								<a name="testNameMaxlength"> </a>
-								<!-- testNameMaxlength -->
-								<span class="method-name">testNameMaxlength</span>
-							</div>
-							<!-- method-content -->
-						</div>
-						<!-- method -->
-					</div>
-					<!-- main-panel-content rounded-window-bottom -->
-				</div>
-				<!-- suite-Default_suite-class-passed -->
-			</div>
-			<!-- panel Default_suite -->
-			<div panel-name="test-xml-Default_suite" class="panel">
-				<div class="main-panel-header rounded-window-top">
-					<span class="header-content">C:\Users\PA\AppData\Local\Temp\testng-eclipse-567363839\testng-customsuite.xml</span>
-				</div>
-				<!-- main-panel-header rounded-window-top -->
-				<div class="main-panel-content rounded-window-bottom">
-					<pre>
+  <body>
+    <div class="top-banner-root">
+      <span class="top-banner-title-font">Test results</span>
+      <br/>
+      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
+    </div> <!-- top-banner-root -->
+    <div class="navigator-root">
+      <div class="navigator-suite-header">
+        <span>All suites</span>
+        <a href="#" class="collapse-all-link" title="Collapse/expand all the suites">
+          <img class="collapse-all-icon" src="collapseall.gif">
+          </img> <!-- collapse-all-icon -->
+        </a> <!-- collapse-all-link -->
+      </div> <!-- navigator-suite-header -->
+      <div class="suite">
+        <div class="rounded-window">
+          <div class="suite-header light-rounded-window-top">
+            <a href="#" class="navigator-link" panel-name="suite-Default_suite">
+              <span class="suite-name border-failed">Default suite</span>
+            </a> <!-- navigator-link -->
+          </div> <!-- suite-header light-rounded-window-top -->
+          <div class="navigator-suite-content">
+            <div class="suite-section-title">
+              <span>Info</span>
+            </div> <!-- suite-section-title -->
+            <div class="suite-section-content">
+              <ul>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="test-xml-Default_suite">
+                    <span>C:\Users\PA\AppData\Local\Temp\testng-eclipse-1008173696\testng-customsuite.xml</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="testlist-Default_suite">
+                    <span class="test-stats">1 test</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="group-Default_suite">
+                    <span>0 groups</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="times-Default_suite">
+                    <span>Times</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="reporter-Default_suite">
+                    <span>Reporter output</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="ignored-methods-Default_suite">
+                    <span>Ignored methods</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="chronological-Default_suite">
+                    <span>Chronological view</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+              </ul>
+            </div> <!-- suite-section-content -->
+            <div class="result-section">
+              <div class="suite-section-title">
+                <span>Results</span>
+              </div> <!-- suite-section-title -->
+              <div class="suite-section-content">
+                <ul>
+                  <li>
+                    <span class="method-stats">2 methods, 2 failed,   </span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Default_suite" class="hide-methods failed suite-Default_suite"> (hide)</a> <!-- hide-methods failed suite-Default_suite -->
+                      <a href="#" panel-name="suite-Default_suite" class="show-methods failed suite-Default_suite"> (show)</a> <!-- show-methods failed suite-Default_suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Default_suite">
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="editEffect.editRecordingSimpleEffect" hash-for-method="checkEOEffectedChanged">checkEOEffectedChanged</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="editEffect.editRecordingSimpleEffect" hash-for-method="chooseSimpleEffect">chooseSimpleEffect</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Default_suite -->
+                  </li>
+                </ul>
+              </div> <!-- suite-section-content -->
+            </div> <!-- result-section -->
+          </div> <!-- navigator-suite-content -->
+        </div> <!-- rounded-window -->
+      </div> <!-- suite -->
+    </div> <!-- navigator-root -->
+    <div class="wrapper">
+      <div class="main-panel-root">
+        <div panel-name="suite-Default_suite" class="panel Default_suite">
+          <div class="suite-Default_suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">editEffect.editRecordingSimpleEffect</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="checkEOEffectedChanged">
+                  </a> <!-- checkEOEffectedChanged -->
+                  <span class="method-name">checkEOEffectedChanged</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [ddddd_Giant] but found [ddddd_Devil]
+	at org.testng.Assert.fail(Assert.java:97)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:136)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:575)
+	at org.testng.Assert.assertEquals(Assert.java:585)
+	at editEffect.editRecordingSimpleEffect.checkEOEffectedChanged(editRecordingSimpleEffect.java:147)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="chooseSimpleEffect">
+                  </a> <!-- chooseSimpleEffect -->
+                  <span class="method-name">chooseSimpleEffect</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:25:53&apos;
+System info: host: &apos;DESKTOP-P48RHB2&apos;, ip: &apos;192.168.103.2&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_211&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {app: C:\Users\PA\Downloads\Voice..., appActivity: com.supereffect.voicechange..., appPackage: com.supereffect.voicechanger, appWaitActivity: com.supereffect.voicechange..., appWaitPackage: com.supereffect.voicechanger, automatioName: UiAutomator2, databaseEnabled: false, desired: {app: C:\Users\PA\Downloads\Voice..., automatioName: UiAutomator2, deviceName: Nemo, platformName: android, platformVersion: 5.0.2, udid: fe0ecacb}, deviceManufacturer: samsung, deviceModel: SM-A300H, deviceName: fe0ecacb, deviceScreenSize: 540x960, deviceUDID: fe0ecacb, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, platform: LINUX, platformName: Android, platformVersion: 5.0.2, takesScreenshot: true, udid: fe0ecacb, warnings: {}, webStorageEnabled: false}
+Session ID: c2e25455-1fac-4dd2-8a97-9fac35476bd6
+*** Element info: {Using=id, value=com.supereffect.voicechanger:id/title}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:239)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:41)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at io.appium.java_client.DefaultGenericMobileElement.execute(DefaultGenericMobileElement.java:45)
+	at io.appium.java_client.MobileElement.execute(MobileElement.java:1)
+	at io.appium.java_client.android.AndroidElement.execute(AndroidElement.java:1)
+	at org.openqa.selenium.remote.RemoteWebElement.findElement(RemoteWebElement.java:185)
+	at io.appium.java_client.DefaultGenericMobileElement.findElement(DefaultGenericMobileElement.java:65)
+	at io.appium.java_client.MobileElement.findElement(MobileElement.java:1)
+	at io.appium.java_client.android.AndroidElement.findElement(AndroidElement.java:1)
+	at org.openqa.selenium.remote.RemoteWebElement.findElementById(RemoteWebElement.java:221)
+	at io.appium.java_client.DefaultGenericMobileElement.findElementById(DefaultGenericMobileElement.java:73)
+	at io.appium.java_client.MobileElement.findElementById(MobileElement.java:1)
+	at io.appium.java_client.android.AndroidElement.findElementById(AndroidElement.java:1)
+	at editEffect.editRecordingSimpleEffect.chooseSimpleEffect(editRecordingSimpleEffect.java:88)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Default_suite-class-failed -->
+        </div> <!-- panel Default_suite -->
+        <div panel-name="test-xml-Default_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">C:\Users\PA\AppData\Local\Temp\testng-eclipse-1008173696\testng-customsuite.xml</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Default suite&quot;&gt;
   &lt;test thread-count=&quot;5&quot; verbose=&quot;2&quot; name=&quot;Default test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;createScreen.checkInputRecordName&quot;/&gt;
+      &lt;class name=&quot;editEffect.editRecordingSimpleEffect&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
             </pre>
-				</div>
-				<!-- main-panel-content rounded-window-bottom -->
-			</div>
-			<!-- panel -->
-			<div panel-name="testlist-Default_suite" class="panel">
-				<div class="main-panel-header rounded-window-top">
-					<span class="header-content">Tests for Default suite</span>
-				</div>
-				<!-- main-panel-header rounded-window-top -->
-				<div class="main-panel-content rounded-window-bottom">
-					<ul>
-						<li><span class="test-name">Default test (1 class)</span></li>
-					</ul>
-				</div>
-				<!-- main-panel-content rounded-window-bottom -->
-			</div>
-			<!-- panel -->
-			<div panel-name="group-Default_suite" class="panel">
-				<div class="main-panel-header rounded-window-top">
-					<span class="header-content">Groups for Default suite</span>
-				</div>
-				<!-- main-panel-header rounded-window-top -->
-				<div class="main-panel-content rounded-window-bottom"></div>
-				<!-- main-panel-content rounded-window-bottom -->
-			</div>
-			<!-- panel -->
-			<div panel-name="times-Default_suite" class="panel">
-				<div class="main-panel-header rounded-window-top">
-					<span class="header-content">Times for Default suite</span>
-				</div>
-				<!-- main-panel-header rounded-window-top -->
-				<div class="main-panel-content rounded-window-bottom">
-					<div class="times-div">
-						<script type="text/javascript">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="testlist-Default_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Tests for Default suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <ul>
+              <li>
+                <span class="test-name">Default test (1 class)</span>
+              </li>
+            </ul>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="group-Default_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Groups for Default suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="times-Default_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Times for Default suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="times-div">
+              <script type="text/javascript">
 suiteTableInitFunctions.push('tableData_Default_suite');
 function tableData_Default_suite() {
 var data = new google.visualization.DataTable();
@@ -309,102 +297,69 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(4);
+data.addRows(2);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'testNameIsNull')
-data.setCell(0, 2, 'createScreen.checkInputRecordName')
-data.setCell(0, 3, 16136);
+data.setCell(0, 1, 'chooseSimpleEffect')
+data.setCell(0, 2, 'editEffect.editRecordingSimpleEffect')
+data.setCell(0, 3, 13152);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'testNameMaxlength')
-data.setCell(1, 2, 'createScreen.checkInputRecordName')
-data.setCell(1, 3, 2);
-data.setCell(2, 0, 2)
-data.setCell(2, 1, 'testNameIsEmpty')
-data.setCell(2, 2, 'createScreen.checkInputRecordName')
-data.setCell(2, 3, 1);
-data.setCell(3, 0, 3)
-data.setCell(3, 1, 'testNameIsHTMLTags')
-data.setCell(3, 2, 'createScreen.checkInputRecordName')
-data.setCell(3, 3, 1);
+data.setCell(1, 1, 'checkEOEffectedChanged')
+data.setCell(1, 2, 'editEffect.editRecordingSimpleEffect')
+data.setCell(1, 3, 4476);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-						<span class="suite-total-time">Total running time: 16
-							seconds</span>
-						<div id="times-div-Default_suite"></div>
-						<!-- times-div-Default_suite -->
-					</div>
-					<!-- times-div -->
-				</div>
-				<!-- main-panel-content rounded-window-bottom -->
-			</div>
-			<!-- panel -->
-			<div panel-name="reporter-Default_suite" class="panel">
-				<div class="main-panel-header rounded-window-top">
-					<span class="header-content">Reporter output for Default
-						suite</span>
-				</div>
-				<!-- main-panel-header rounded-window-top -->
-				<div class="main-panel-content rounded-window-bottom"></div>
-				<!-- main-panel-content rounded-window-bottom -->
-			</div>
-			<!-- panel -->
-			<div panel-name="ignored-methods-Default_suite" class="panel">
-				<div class="main-panel-header rounded-window-top">
-					<span class="header-content">0 ignored methods</span>
-				</div>
-				<!-- main-panel-header rounded-window-top -->
-				<div class="main-panel-content rounded-window-bottom"></div>
-				<!-- main-panel-content rounded-window-bottom -->
-			</div>
-			<!-- panel -->
-			<div panel-name="chronological-Default_suite" class="panel">
-				<div class="main-panel-header rounded-window-top">
-					<span class="header-content">Methods in chronological order</span>
-				</div>
-				<!-- main-panel-header rounded-window-top -->
-				<div class="main-panel-content rounded-window-bottom">
-					<div class="chronological-class">
-						<div class="chronological-class-name">createScreen.checkInputRecordName</div>
-						<!-- chronological-class-name -->
-						<div class="configuration-test before">
-							<span class="method-name">beforeTest</span> <span
-								class="method-start">0 ms</span>
-						</div>
-						<!-- configuration-test before -->
-						<div class="test-method">
-							<img src="failed.png"> </img> <span class="method-name">testNameIsNull</span>
-							<span class="method-start">18810 ms</span>
-						</div>
-						<!-- test-method -->
-						<div class="test-method">
-							<span class="method-name">testNameIsEmpty</span> <span
-								class="method-start">34955 ms</span>
-						</div>
-						<!-- test-method -->
-						<div class="test-method">
-							<span class="method-name">testNameIsHTMLTags</span> <span
-								class="method-start">34959 ms</span>
-						</div>
-						<!-- test-method -->
-						<div class="test-method">
-							<span class="method-name">testNameMaxlength</span> <span
-								class="method-start">34962 ms</span>
-						</div>
-						<!-- test-method -->
-						<div class="configuration-test after">
-							<span class="method-name">afterTest</span> <span
-								class="method-start">34967 ms</span>
-						</div>
-						<!-- configuration-test after -->
-					</div>
-					<!-- main-panel-content rounded-window-bottom -->
-				</div>
-				<!-- panel -->
-			</div>
-			<!-- main-panel-root -->
-		</div>
-		<!-- wrapper -->
-</body>
+              <span class="suite-total-time">Total running time: 17 seconds</span>
+              <div id="times-div-Default_suite">
+              </div> <!-- times-div-Default_suite -->
+            </div> <!-- times-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="reporter-Default_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Reporter output for Default suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="ignored-methods-Default_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">0 ignored methods</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="chronological-Default_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Methods in chronological order</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="chronological-class">
+              <div class="chronological-class-name">editEffect.editRecordingSimpleEffect</div> <!-- chronological-class-name -->
+              <div class="configuration-test before">
+                <span class="method-name">beforeTest</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-test before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">chooseSimpleEffect</span>
+                <span class="method-start">31976 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">checkEOEffectedChanged</span>
+                <span class="method-start">45154 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-test after">
+                <span class="method-name">afterTest</span>
+                <span class="method-start">49632 ms</span>
+              </div> <!-- configuration-test after -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+      </div> <!-- main-panel-root -->
+    </div> <!-- wrapper -->
+  </body>
 </html>
