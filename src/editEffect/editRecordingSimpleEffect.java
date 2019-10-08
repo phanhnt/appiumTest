@@ -35,7 +35,7 @@ public class editRecordingSimpleEffect {
 		rec.setName(name);
 	}
 	public String getName() {
-		setName("ddddd");
+		setName("test");
 		return name;
 	}	
 	
@@ -48,7 +48,7 @@ public class editRecordingSimpleEffect {
 	}	
 	
 	@BeforeTest
-	public void beforeTest() throws MalformedURLException, InterruptedException {
+	public void beforeTest() throws Exception {
 		app.start();
 		WebElement my_studio_button = app.driver.findElementById("com.supereffect.voicechanger:id/myStudioButton");
 		my_studio_button.click();
@@ -57,16 +57,26 @@ public class editRecordingSimpleEffect {
 		tab_recording.click();
 		// List<AndroidElement> recording_list =
 		// app.driver.findElements(MobileBy.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.LinearLayout/android.widget.RelativeLayout/android.support.v4.view.ViewPager/android.widget.FrameLayout/android.support.v7.widget.RecyclerView/*"));
-		MobileElement el = (MobileElement) app.driver.findElement(MobileBy.AndroidUIAutomator("new UiScrollable(" 
+		MobileElement effect_item = (MobileElement) app.driver.findElement(MobileBy.AndroidUIAutomator("new UiScrollable(" 
 				+ "new UiSelector().scrollable(true)).scrollIntoView("
 				+ "new UiSelector().textContains(\""+getName()+"\"));"));
-		el.click();	
-		System.out.println(el.getText());
-		MobileElement icon = app.driver.findElement(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.LinearLayout/android.widget.RelativeLayout/android.support.v4.view.ViewPager/android.widget.FrameLayout/android.support.v7.widget.RecyclerView/android.widget.FrameLayout[7]/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.ImageView[2]"));
-		icon.click();
-        Thread.sleep(1000);
-		WebElement option = app.driver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.ListView/android.widget.LinearLayout[1]");
-		option.click();
+		System.out.println(effect_item.getText());
+		
+		effect_item.click();	    
+	   // List<AndroidElement> sib =  app.driver.findElements(MobileBy.className("android.widget.LinearLayout")("//*[@text='test']/*"));
+	    List<AndroidElement> sib =  app.driver.findElements(By.xpath("//*[contains(@class,\"android.widget.LinearLayout\")][@text='test']"));
+	    System.out.println(sib.size());
+	    //sib.findElement(By.id("com.supereffect.voicechanger:id/buttonMore")).click();
+	   // MobileElement b = (MobileElement) app.driver.findElement(MobileBy.AndroidUIAutomator("new UiSelector().textContains(\""+getName()+"\").childSelector(new UiSelector().resourceId(\"com.supereffect.voicechanger:id/buttonMore\"));"));
+	   // a.click();
+	    //MobileElement b= (MobileElement) app.driver.findElement(MobileBy.AndroidUIAutomator("new UiScrollable("
+	    	//				+ "new UiSelector().scrollable(true)).scrollIntoView("
+	    		//            +"new UiSelector().resourceId(\"com.supereffect.voicechanger:id/buttonMore\").fromParent(new UiSelector().textContains(\""+getName()+"\")));"));
+	   // b.click();
+	
+	    List<AndroidElement> option_frame = app.driver.findElements(By.className("android.widget.LinearLayout"));
+	    System.out.println(option_frame.size());
+	    option_frame.get(0).click();
 	}
 
 	@AfterTest
@@ -74,18 +84,8 @@ public class editRecordingSimpleEffect {
 		app.driver.navigate();
 	}
 	
-	@Test (priority=1, enabled=true) 
+	@Test (priority=1, enabled=false) 
 	public void chooseSimpleEffect() throws InterruptedException {
-		List<AndroidElement> frame1 = app.driver.findElements(By.id("com.supereffect.voicechanger:id/effectLayout")); 
-		System.out.println("frame2: "+ frame1.size());
-		/* <Cách lấy list khác vẫn work>
-		 * List<AndroidElement> frame2 = app.driver.findElementsByXPath(
-		 * "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.LinearLayout/android.support.v7.widget.RecyclerView/*"); 
-		 * List<AndroidElement> frame2 =
-		 * app.driver.findElementsByXPath("//android.support.v7.widget.RecyclerView/*");
-		 */
-		//scroll to specific element in lists.   
-		String endScr =  frame1.get(frame1.size()-1).findElementById("com.supereffect.voicechanger:id/title").getText();
 		MobileElement el = (MobileElement) app.driver.findElement(MobileBy.AndroidUIAutomator("new UiScrollable(" 
 				+ "new UiSelector().scrollable(true)).scrollIntoView("
 				+ "new UiSelector().textContains(\""+ getEffect() +"\"));"));
@@ -114,7 +114,7 @@ public class editRecordingSimpleEffect {
 		touch.press(PointOption.point(x, fromY)).waitAction().moveTo(PointOption.point(x, toY)).release().perform();*/	
 	}
 	
-	@Test (priority=2, enabled=true) 
+	@Test (priority=2, enabled=false) 
 	public void checkEOEffectedChanged() throws InterruptedException {
 		//handle popup after saving
 		//frane layout : resource-id: android:id/content ; class: android.widget.FrameLayout
@@ -123,8 +123,8 @@ public class editRecordingSimpleEffect {
 		//rate button: com.supereffect.voicechanger:id/btn_five_stars
 		// class of buttons: android.widget.TextView
 		//Thread.sleep(2000);
-		List<AndroidElement> buttonAds = app.driver.findElements(By.id("com.supereffect.voicechanger:id/btn_later"));
-		if (buttonAds.isEmpty()) {
+		//List<AndroidElement> buttonAds = app.driver.findElements(By.id("com.supereffect.voicechanger:id/btn_later"));
+		if (app.driver.findElements(By.id("com.supereffect.voicechanger:id/btn_later")).isEmpty()) {
 			WebElement back_button = app.driver.findElementByAccessibilityId("Navigate up");
 			back_button.click();
 			Thread.sleep(1000);
