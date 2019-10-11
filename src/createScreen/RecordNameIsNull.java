@@ -52,7 +52,7 @@ import net.sourceforge.tess4j.util.LoadLibs;
 
 public class RecordNameIsNull{
 	public setup app = new setup();
-	private WebDriverWait wait;
+
 	 static String scrShotDir = "screenshots";
 	  File scrFile;
 	  static File scrShotDirPath = new java.io.File("./"+ scrShotDir+ "//");

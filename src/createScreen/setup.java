@@ -56,7 +56,10 @@ public class setup {
 		
 		*/
 		driver = new AndroidDriver<AndroidElement>(new URL("http://0.0.0.0:4723/wd/hub"), caps);		
-		
+		if (driver.findElementById("android:id/button1").isDisplayed())
+		{
+			driver.findElementById("android:id/button1").click();
+		}
 		
   }
 }

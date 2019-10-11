@@ -5,9 +5,9 @@
     <classes>
       <class name="editEffect.editRecordingSimpleEffect">
         <methods>
+          <include name="checkEOEffectedChanged"/>
           <include name="afterTest"/>
           <include name="beforeTest"/>
-          <include name="chooseSimpleEffect"/>
         </methods>
       </class> <!-- editEffect.editRecordingSimpleEffect -->
     </classes>

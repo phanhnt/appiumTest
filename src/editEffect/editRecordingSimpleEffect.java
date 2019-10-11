@@ -17,6 +17,7 @@ import static org.testng.Assert.assertTrue;
 
 import java.net.MalformedURLException;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
@@ -68,15 +69,30 @@ public class editRecordingSimpleEffect {
 	    System.out.println(sib.size());
 	    //sib.findElement(By.id("com.supereffect.voicechanger:id/buttonMore")).click();
 	   // MobileElement b = (MobileElement) app.driver.findElement(MobileBy.AndroidUIAutomator("new UiSelector().textContains(\""+getName()+"\").childSelector(new UiSelector().resourceId(\"com.supereffect.voicechanger:id/buttonMore\"));"));
-	   // a.click();
-	    //MobileElement b= (MobileElement) app.driver.findElement(MobileBy.AndroidUIAutomator("new UiScrollable("
-	    	//				+ "new UiSelector().scrollable(true)).scrollIntoView("
-	    		//            +"new UiSelector().resourceId(\"com.supereffect.voicechanger:id/buttonMore\").fromParent(new UiSelector().textContains(\""+getName()+"\")));"));
-	   // b.click();
-	
-	    List<AndroidElement> option_frame = app.driver.findElements(By.className("android.widget.LinearLayout"));
-	    System.out.println(option_frame.size());
-	    option_frame.get(0).click();
+	   
+	    
+	    List<AndroidElement> b=  app.driver.findElements(MobileBy.AndroidUIAutomator("new UiSelector().resourceId(\"com.supereffect.voicechanger:id/buttonMore\");"));
+	    //	    
+	    for (int i = 3; i < b.size(); i++) {
+	    	b.get(i).click();
+	    	List<AndroidElement> option_frame = app.driver.findElements(By.className("android.widget.LinearLayout"));
+	 	    System.out.println(option_frame.size());
+	 	    option_frame.get(0).click();	 	    
+	    	int time = 0;
+	    	MobileElement optButtonFind = app.driver.findElement(MobileBy.AndroidUIAutomator("new UiSelector().resourceId(\"com.supereffect.voicechanger:id/trackTitle\")"));
+	    	String name= optButtonFind.getText();
+		    System.out.print(name);
+		    if (name.equals(getName())){
+		    	System.out.println("Found");
+		    	break;
+		    }else {
+		    	time++;
+		    	app.driver.findElementByAccessibilityId("Navigate up");
+		    	System.out.println("Repeat finding "+ time +" times");
+		    }
+	    }
+	    
+	   
 	}
 
 	@AfterTest
@@ -86,24 +102,22 @@ public class editRecordingSimpleEffect {
 	
 	@Test (priority=1, enabled=false) 
 	public void chooseSimpleEffect() throws InterruptedException {
+		app.driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		MobileElement el = (MobileElement) app.driver.findElement(MobileBy.AndroidUIAutomator("new UiScrollable(" 
 				+ "new UiSelector().scrollable(true)).scrollIntoView("
 				+ "new UiSelector().textContains(\""+ getEffect() +"\"));"));
 		el.click();	
 		//app.driver.findElement(MobileBy.AndroidUIAutomator(uiautomatorText))
 		MobileElement child = app.driver.findElements(MobileBy.id("com.supereffect.voicechanger:id/saveButton")).get(4);
-		child.click();	
-		
+		child.click();			
 		//handle pop-up by click ok
-		app.driver.findElement(By.id("android:id/button1")).click();
-	 
+		app.driver.findElement(By.id("android:id/button1")).click();	 
 		//wait processing
-		/*
-		 * WebElement popup=
-		 * app.driver.findElementById("com.supereffect.voicechanger:id/action_bar_root")
-		 * ; if (popup.isDisplayed()) { app.driver.wait(); }
-		 */
-		Thread.sleep(8000);
+		 WebElement popup=
+		 app.driver.findElementById("com.supereffect.voicechanger:id/action_bar_root");
+		 if (popup.isDisplayed()) {
+			 app.driver.wait(); 
+			 }
 		
 		//scroll from top to bottom by coordinate-> works!		 
 		/*Dimension size = app.driver.manage().window().getSize();
