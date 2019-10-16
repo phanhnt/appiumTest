@@ -68,29 +68,27 @@ public class editRecordingSimpleEffect {
 	    List<AndroidElement> sib =  app.driver.findElements(By.xpath("//*[contains(@class,\"android.widget.LinearLayout\")][@text='test']"));
 	    System.out.println(sib.size());
 	    //sib.findElement(By.id("com.supereffect.voicechanger:id/buttonMore")).click();
-	   // MobileElement b = (MobileElement) app.driver.findElement(MobileBy.AndroidUIAutomator("new UiSelector().textContains(\""+getName()+"\").childSelector(new UiSelector().resourceId(\"com.supereffect.voicechanger:id/buttonMore\"));"));
-	   
-	    
-	    List<AndroidElement> b=  app.driver.findElements(MobileBy.AndroidUIAutomator("new UiSelector().resourceId(\"com.supereffect.voicechanger:id/buttonMore\");"));
-	    //	    
+	
+	    List<AndroidElement> b=  app.driver.findElements(By.id("com.supereffect.voicechanger:id/buttonMore"));
+	    //	   
+	    int time=0;
 	    for (int i = 3; i < b.size(); i++) {
 	    	b.get(i).click();
 	    	List<AndroidElement> option_frame = app.driver.findElements(By.className("android.widget.LinearLayout"));
 	 	    System.out.println(option_frame.size());
 	 	    option_frame.get(0).click();	 	    
-	    	int time = 0;
+	    	
 	    	MobileElement optButtonFind = app.driver.findElement(MobileBy.AndroidUIAutomator("new UiSelector().resourceId(\"com.supereffect.voicechanger:id/trackTitle\")"));
 	    	String name= optButtonFind.getText();
-		    System.out.print(name);
 		    if (name.equals(getName())){
 		    	System.out.println("Found");
 		    	break;
-		    }else {
+		    }else {    	
 		    	time++;
-		    	app.driver.findElementByAccessibilityId("Navigate up");
-		    	System.out.println("Repeat finding "+ time +" times");
+		    	app.driver.findElementByAccessibilityId("Navigate up").click();
 		    }
 	    }
+	    System.out.println("Repeat finding "+ time +" times");
 	    
 	   
 	}
@@ -100,7 +98,7 @@ public class editRecordingSimpleEffect {
 		app.driver.navigate();
 	}
 	
-	@Test (priority=1, enabled=false) 
+	@Test (priority=1, enabled=true) 
 	public void chooseSimpleEffect() throws InterruptedException {
 		app.driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		MobileElement el = (MobileElement) app.driver.findElement(MobileBy.AndroidUIAutomator("new UiScrollable(" 
@@ -115,9 +113,6 @@ public class editRecordingSimpleEffect {
 		//wait processing
 		 WebElement popup=
 		 app.driver.findElementById("com.supereffect.voicechanger:id/action_bar_root");
-		 if (popup.isDisplayed()) {
-			 app.driver.wait(); 
-			 }
 		
 		//scroll from top to bottom by coordinate-> works!		 
 		/*Dimension size = app.driver.manage().window().getSize();
@@ -128,7 +123,7 @@ public class editRecordingSimpleEffect {
 		touch.press(PointOption.point(x, fromY)).waitAction().moveTo(PointOption.point(x, toY)).release().perform();*/	
 	}
 	
-	@Test (priority=2, enabled=false) 
+	@Test (priority=2, enabled=true) 
 	public void checkEOEffectedChanged() throws InterruptedException {
 		//handle popup after saving
 		//frane layout : resource-id: android:id/content ; class: android.widget.FrameLayout

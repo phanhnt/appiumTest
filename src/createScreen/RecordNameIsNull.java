@@ -93,20 +93,15 @@ public class RecordNameIsNull{
 	}
 	 public String readToastMessage() throws TesseractException{
 		 String imgName = takeScreenShot();
-		  String result = null;
+		 
 		 File imageFile = new File(scrShotDirPath, imgName);
 		  System.out.println("Image name is :" + imageFile.toString());
-		 // File imageFile = new File("C:\\Users\\PA\\Downloads\\appiumTest-master\\screenshots\\03-Oct-2019__03_19_50PM.png");
-		  ITesseract instance = new Tesseract();
-	
-		  File tessDataFolder = LoadLibs.extractTessResources("tessdata"); // Extracts Tessdata folder from referenced tess4j jar for language support
-		  //instance.setDatapath(tessDataFolder.getAbsolutePath()); // sets tessData path	  
-	
-		  instance.setDatapath("C:\\Users\\PA\\Downloads\\Tess4J-3.4.8-src\\Tess4J\\tessdata");
-		  instance.setLanguage("eng(2)");
-		  
-		  result = instance.doOCR(imageFile);
-		  System.out.println(result);		
+		 
+		 image screenshot = new image();
+	//	 screenshot.imageProcess(imgName);
+		 String result = screenshot.get_text() ;
+		  System.out.println(screenshot.get_image_name());		
+		//  System.out.println(screenshot.main(args););	
 		 return result;		
 	 }
 	  
